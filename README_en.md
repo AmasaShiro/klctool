@@ -1,6 +1,6 @@
 # klctool - Karaoke Lyrics Card Creation Support Tool
 
-[日本語 - Japanese](https://github.com/AmasaShiro/klctool/README.md)
+[日本語 - Japanese](https://github.com/AmasaShiro/klctool/blob/main/README.md)
 
 ![sample image](resources/sample.jpeg)
 
