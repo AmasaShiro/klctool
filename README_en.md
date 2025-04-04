@@ -54,11 +54,11 @@ Your feedback and opinions on X (formerly Twitter) or as GitHub Issues are welco
 2. Prepare Background Images  
    Prepare image files by taking screenshots of your favorite scenes in full screen (on PC) from YouTube, etc.
 3. Execute `klctool`.
-   1. `klctool hiragana lyrics_file_name`
+   1. `klctool hiragana lyrics_file_name`  
       Adds hiragana to the prepared lyrics file using AI. If Gemini forgets to convert or makes a mistake, laugh it off and run it again.
-   2. `klctool convert2odt lyrics_file_name`
+   2. `klctool convert2odt lyrics_file_name`  
       Converts the hiragana lyrics file to ODT format, which can be handled by the word processor LibreOffice Writer.
-   3. `klctool adjustimage image_file_name1 image_file_name2` (you can specify just one image file)
+   3. `klctool adjustimage image_file_name1 image_file_name2` (you can specify just one image file)  
       Processes and adjusts the prepared image files to match the ODT format file.
       - Trims unnecessary parts (player controls).
       - Masks with 80% opacity.
