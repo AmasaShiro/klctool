@@ -7,7 +7,7 @@ classifiers = [
     "Natural Language :: Japanese",
     "Topic :: Utilities"
 ]
-readme = "README_pypi.md"
+readme = "README_PyPI.md"
 authors = [
     { name = "AmasaShiro" }
 ]
