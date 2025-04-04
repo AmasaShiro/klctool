@@ -2,15 +2,15 @@
 
 [English](https://github.com/AmasaShiro/klctool/README_en.md)
 
-![サンプル画像](resources/sample.jpeg)
-:;l.
+![サンプル画像](resources/sample.jpeg)  
+
 カラオケ好きな皆さん！練習のとき歌詞カードほしくないですか？でも歌詞カードを作るのって結構面倒… これはそんな面倒な作業をお手伝いするツールです。  
 
 歌詞を収めたマークダウン形式のファイルを AI (Google Gemini) でひらがな化、ワードプロセッサーの LibreOffice Writer 形式に変換して複雑な編集ができるようにします。  
 
 また YouTube でお気に入りのシーンをスクリーンショットで撮るなどした画像を背景画像として使えるように加工します。  
 
-このツールであなただけの歌詞カードを作りましょう！  
+このツールであなただけの歌詞カードを作りませんか？  
 
 感想・意見は X、Issue などでお待ちしています！
 
@@ -28,7 +28,7 @@
 - PC でコマンドラインを使うことができる人
 - AI の間違いを笑って許せる人
 
-## 必要ソフトウェア
+## 必要ソフトウェアなど
 
 - Python
 - Pandoc
@@ -40,29 +40,29 @@
 
 1. 歌詞準備
    1. 歌詞を収めたファイルをサンプルのフォーマットに従い準備します。[サンプル](lyrics-sample.md)  
-      - ファイウルの先頭で `---` で囲んだ部分に次の3つのプロパティを記述すると、ODT形式への変換時にのヘッダ部分に埋め込みます。
+      - ファイルの先頭で `---` で囲んだ部分に次の3つのプロパティを記述すると、ODT形式への変換時にのヘッダ部分に埋め込みます。
         - vc-title
         - vc-artist
         - vc-collab (タイアップ情報など。アニメのタイトルなど)
       - マークダウン形式のヘッダ (`# アーティスト - 曲名`など)
       - 歌詞
    2. 以下のような編集もしておきます。
-      - 発音の揺れを確定: 行く(いく/ゆく)など 「いく」なのか「ゆく」
+      - 発音の揺れを確定: 行く(いく/ゆく)など 「いく」なのか「ゆく」なのか
       - インデント: 全角空白で行頭を段付 (全角を使用するのはマークダウン形式のため)
       - 実際の歌唱どおりに: 「何百年経ったって」→「何百年経ってたって」など (ClariS / PRIMALove)
       - 難読・読み替えにルビ: 「自らを見失った絵画」→「自らを見失った[絵画] (メイク)」など (可不 / フォニイ)
-2. 背景画像の準備
+2. 背景画像の準備  
    YouTube でお気に入りのシーンをフルスクリーン(PC)でスクリーンショットするなどして画像ファイルを準備します。
-3. `klctool` 実行
+3. `klctool` 実行  
    1. `klctool hira 歌詞ファイル名`
       準備した歌詞ファイルをAIでひらがな化して追加。変換忘れや間違いがあったときは笑って再実行
    2. `klctool odt ひらがな化した歌詞ファイル名`
       ひらがな化した歌詞ファイルをワードプロセッサ LibreOffice Writer で扱える odt 形式に変換
-   3. `klctool adjimg 画像ファイル名1 画像ファイル名2` (画像ファイルは1つでも可)
+   3. `klctool img 画像ファイル名1 画像ファイル名2` (画像ファイルは1つでも可)
       準備した画像ファイルを odt 形式に変換したファイルにあうよう加工・調整
       - 余分な部分 (プレイヤー部分) をトリミング
       - 不透明度 80% でマスク
-4. 歌詞の編集
+4. 歌詞の編集  
    ひらがな化した歌詞を変換間違い修正、カラオケで歌いやすいように母音や長音の追加などの編集をします。Google Music Font などの音楽系の記号を使うとわかりやすいかも。
 5. 背景画像設定
    背景画像を LibreOffice Writer でページの背景に指定します。
@@ -72,7 +72,7 @@
      - 1ページ目: 標準ページスタイル
      - 2ページ目: 右ページスタイル
      - 3ページ目: 左ページスタイル
-6. 歌詞カードの完成
+6. 歌詞カードの完成  
    LibreOffice Writer で PDF形式でエクスポートし、タブレットに転送、または印刷するなどしてカラオケで使います。自分の歌唱録音を聞いて気づいたことをメモすると捗るかも。
 
 ## セットアップ
@@ -130,7 +130,7 @@ pip install klctool
 
 ```zsh
 klctool [-h] [--debug] [--config-dir CONFIG_DIR]
-     {hiragana,convert2odt,odt,adjustimage,adjimg} ...
+     {hiragana,hira,convert2odt,odt,adjustimage,img} ...
  -h, --help                   ヘルプを表示する
  --debug, -d                  デバッグモードを有効にする
  --config-dir, -c CONFIG_DIR  設定ファイルのディレクトリを指定する
@@ -142,8 +142,8 @@ input_files で指定したマークダウン形式の歌詞ファイルをひ�
 
 ```zsh
 klctool hiragana [-h] [--output-dir OUTPUT_DIR] [--output-suffix OUTPUT_SUFFIX]
-                [--model-name MODEL_NAME] [--api-key-file API_KEY_FILE] [--api-key API_KEY]
-                [--prompt-file PROMPT_FILE]
+                [--model-name MODEL_NAME] [--api-key-file API_KEY_FILE]
+                [--api-key API_KEY] [--prompt-file PROMPT_FILE]
                 input_files [input_files ...]
  input_files                          入力ファイル 複数指定可能
  -h, --help                           ヘルプを表示する
@@ -187,7 +187,7 @@ klctool convert2odt [-h] [--output-dir OUTPUT_DIR] [--template-odt TEMPLATE_ODT]
 - --template-odt を指定した場合、テンプレートファイルとして使用します。
 - --lua-script を指定した場合、スクリプトファイルとして使用します。
 
-### サブコマンド 画像ファイル調整・加工 adjustimage (adjimg)
+### サブコマンド 画像ファイル調整・加工 adjustimage (img)
 
 input_files で指定した png ファイルを加工します。加工したファイルは元のファイルのフォルダにファイル名末尾に `_processed` をつけて保存します。
 

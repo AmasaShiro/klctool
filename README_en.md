@@ -130,7 +130,7 @@ pip install klctool
 
 ```zsh
 klctool [-h] [--debug] [--config-dir CONFIG_DIR]
-     {hiragana,convert2odt,odt,adjustimage,adjimg} ...
+     {hiragana,hira,convert2odt,odt,adjustimage,img} ...
  -h, --help                   Show help message
  --debug, -d                  Enable debug mode
  --config-dir, -c CONFIG_DIR  Specify the directory for configuration files
@@ -142,8 +142,8 @@ Converts the Markdown lyrics files specified by `input_files` to hiragana. The c
 
 ```zsh
 klctool hiragana [-h] [--output-dir OUTPUT_DIR] [--output-suffix OUTPUT_SUFFIX]
-                [--model-name MODEL_NAME] [--api-key-file API_KEY_FILE] [--api-key API_KEY]
-                [--prompt-file PROMPT_FILE]
+                [--model-name MODEL_NAME] [--api-key-file API_KEY_FILE]
+                [--api-key API_KEY] [--prompt-file PROMPT_FILE]
                 input_files [input_files ...]
  input_files                          Input files (multiple can be specified)
  -h, --help                           Show help message
@@ -187,7 +187,7 @@ klctool convert2odt [-h] [--output-dir OUTPUT_DIR] [--template-odt TEMPLATE_ODT]
 - If `--template-odt` is specified, it will be used as the template file.
 - If `--lua-script` is specified, it will be used as the script file.
 
-### Subcommand: Adjust/Process Image Files adjustimage (adjimg)
+### Subcommand: Adjust/Process Image Files adjustimage (img)
 
 Processes the PNG files specified by `input_files`. The processed files are saved in the same folder as the original files with `_processed` appended to the filename.
 
