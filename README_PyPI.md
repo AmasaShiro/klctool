@@ -1,6 +1,6 @@
 # klctool - Karaoke Lyrics Card Creation Support Tool
 
-![sample image](https://github.com/AmasaShiro/klctool/blob/main/resources/sample.jpeg)
+![sample image](https://raw.githubusercontent.com/AmasaShiro/klctool/refs/heads/main/resources/sample.jpeg)
 
 - klctool: Command Line tool
   - Hiragana conversion of lyrics: Powered by Google Gemini
