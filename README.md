@@ -122,8 +122,6 @@ https://aistudio.google.com/
 pip install klctool
 ```
 
-(予定) Intel Macの場合 Homebrew でインストール
-
 ## klctool コマンドラインオプション
 
 ### 共通オプション
@@ -262,6 +260,7 @@ MIT License
 - Git / GitHub
 - Python のパッケージング
 - AI プログラミング
+- nuitka
 
 ## 謝辞
 

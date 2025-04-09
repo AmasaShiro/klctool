@@ -2,7 +2,7 @@
 
 import os
 import subprocess
-from .common import debug_print
+from klctool.common import debug_print
 
 
 def run(args, config):

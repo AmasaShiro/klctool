@@ -4,7 +4,7 @@ import os
 import sys
 import google.generativeai as genai
 import re
-from .common import load_config, debug_print
+from klctool.common import load_config, debug_print
 
 def run(args, config):
     debug_print(args, "hiragana サブコマンド実行")

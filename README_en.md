@@ -122,8 +122,6 @@ Set the created API key in the configuration file `gemini-2.0-flash-exp.api_key.
 pip install klctool
 ```
 
-(future) Mac: Install with Homebrew
-
 ## klctool Command-line Options
 
 ### Common Options
@@ -261,6 +259,7 @@ This project was created for the following learning purposes. Your opinions and 
 - Git / GitHub
 - Python packaging
 - AI programming
+- nuitka
 
 ## Acknowledgements
 

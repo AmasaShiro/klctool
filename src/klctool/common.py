@@ -37,6 +37,7 @@ def initialize_config_directory(args):
 
             # config/klctoolフォルダの内容をコピー
             package_config_dir = Path(__file__).parent.parent / 'config' / 'klctool' # パッケージ化した場合のフォルダ指定
+            debug_print(args, f"コピー元フォルダ: {package_config_dir}")
             if package_config_dir.is_dir():
                 for item in package_config_dir.iterdir():
                     dst_path = Path(config_dir_path) / item.name

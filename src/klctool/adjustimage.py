@@ -3,7 +3,7 @@
 import os
 import sys
 from PIL import Image, ImageColor, UnidentifiedImageError
-from .common import load_config, debug_print
+from klctool.common import load_config, debug_print
 
 
 def run(args, config):

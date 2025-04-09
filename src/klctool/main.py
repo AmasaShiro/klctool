@@ -3,7 +3,7 @@
 import argparse
 import os
 
-from .common import initialize_config_directory, load_config, debug_print
+from klctool.common import initialize_config_directory, load_config, debug_print
 
 import klctool.hiragana
 import klctool.convert2odt
